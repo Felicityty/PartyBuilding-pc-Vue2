@@ -1,0 +1,31 @@
+// sidebar
+$menuText:#ffffff;
+$menuActiveText:#f4f4f5;
+$subMenuActiveText:#f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:rgba(180, 65, 61, 1);
+$menuHover:rgba(144, 52, 48, 1);
+$menuFocus: rgba(144, 52, 48, 1);
+
+$subMenuBg:rgba(180, 65, 61, 1);
+$subMenuHover: rgba(144, 52, 48, 1);
+$subMenuFocus: rgba(144, 52, 48, 1);  // 自定义侧边栏focus时的背景颜色
+$subMenuActive: rgba(144, 52, 48, 1); 
+
+$sideBarWidth: 210px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  menuFocus: $menuFocus;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  subMenuFocus: $subMenuFocus;
+  subMenuActive: $subMenuActive;
+  sideBarWidth: $sideBarWidth;
+}

@@ -1,0 +1,544 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-main {
+  padding: 20px;
+}
+
+.el-button-io {
+  background-color: rgba(255, 119, 44, 1);
+  border: 1px solid rgba(255, 119, 44, 1);
+}
+
+.el-button-io:hover {
+  background-color: rgba(255, 119, 44, 0.8);
+  border: 1px solid rgba(255, 119, 44, 0.8);
+}
+
+.el-button-io:focus {
+  background-color: rgba(255, 119, 44, 0.8);
+  border: 1px solid rgba(255, 119, 44, 0.8);
+}
+
+.el-button-delete-search {
+  background-color: rgba(225, 78, 78, 1);
+  border: 1px solid rgba(225, 78, 78, 1);
+}
+
+.el-button-delete-search:hover {
+  background-color: rgba(225, 78, 78, 0.8);
+  border: 1px solid rgba(225, 78, 78, 0.8);
+}
+
+.el-button-delete-search:focus {
+  background-color: rgba(225, 78, 78, 0.8);
+  border: 1px solid rgba(225, 78, 78, 0.8);
+}
+
+.import-warning-tips {
+  // display: inline-block;
+  margin-top: 10px;
+  height: 14px;
+  position: relative;
+
+  svg {
+    position: absolute;
+  }
+
+  span {
+    // line-height: 14px;
+    position: absolute;
+    left: 20px;
+    top: 1px;
+  }
+}
+
+.wth-100 {
+  width: 100%;
+}
+
+.wth_10 {
+  width: 10px;
+}
+
+.wth_17 {
+  width: 17px;
+}
+
+.wth_20 {
+  width: 20px;
+}
+
+.wth_25 {
+  width: 25px;
+}
+
+.wth_30 {
+  width: 30px;
+}
+
+.wth_60 {
+  width: 60px;
+}
+
+.wth_100 {
+  width: 100px;
+}
+
+.wth_200 {
+  width: 200px;
+}
+
+.wth_250 {
+  width: 250px;
+}
+
+.mr-top-5 {
+  margin-top: 5px;
+}
+
+.mr-left-5 {
+  margin-left: 5px !important
+}
+
+.mr-left-10 {
+  margin-left: 10px;
+}
+
+.mr-right-10 {
+  margin-right: 10px;
+}
+
+.mr-right-7 {
+  margin-right: 7px;
+}
+
+.mr-right-30 {
+  margin-right: 30px;
+}
+
+.flex-item-center{
+  display: flex;
+  align-items: center;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.input-height-50 {
+  height: 20px;
+}
+
+.font-size-20 {
+  font-size: 18px;
+}
+
+// 支部下拉框样式
+.el-select-branch {
+  margin-right: 2%;
+  width: 26%;
+}
+
+// 支部管理页面支部下拉框
+.el-select-organ-branch {
+  margin-right: 2%;
+  width: 36%;
+}
+
+// 班级下拉框样式
+.el-select-class {
+  margin-right: 2%;
+  width: 23%;
+}
+
+// 姓名输入框样式
+.el-input-name {
+  margin-right: 2%;
+  width: 13%;
+}
+.el-input-name-user {
+  margin-right: 2%;
+  width: 40%;
+}
+// 支部数据输入框
+.el-input-leader-name {
+  margin-right: 2%;
+  width: 20%;
+}
+
+// 一个按钮
+.top-div-left-menu-ideo {
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+}
+
+// 一长一短俩按钮
+.top-div-left-menu-ide {
+  width: 227px;
+  display: flex;
+  justify-content: space-around;
+}
+
+// 两个长按钮
+.top-div-menu-tow-long {
+  width: 260px;
+  display: flex;
+  justify-content: space-around;
+}
+
+// 批量导入 下载模板 批量导出三个长按钮
+.top-div-left-menu-organ {
+  width: 380px;
+  display: flex;
+  justify-content: space-around;
+}
+
+// 新增 批量导入 下载模板 一短两长
+.top-div-left-menu-aca {
+  width: 360px;
+  display: flex;
+  justify-content: space-around;
+}
+
+// 新增 批量导出 下载模板 批量删除 一短三长四个按钮
+.top-div-left-menu-user {
+  width: 480px;
+  display: flex;
+  justify-content: space-around;
+}
+
+// 四个长按钮
+.top-div-left-menu {
+  width: 540px;
+  max-width: 510px;
+  display: flex;
+  margin-right: auto;
+  justify-content: space-around;
+}
+
+// 一端四长五个按钮
+.top-div-left-menu-five {
+  width: 720px;
+  max-width: 610px;
+  overflow: hidden;
+  display: flex;
+  // margin-right: auto;
+  justify-content: space-around;
+}
+
+// .import-warning-tips {
+//   // display: inline-block;
+//   margin-top: 10px;
+//   height: 14px;
+//   position: relative;
+//   // margin-bottom: 20px;
+
+//   // svg-icon {
+
+//   // svg {
+//   //   position: absolute;
+//   // }
+
+//   span {
+//     // line-height: 14px;
+//     position: absolute;
+//     left: 20px;
+//     top: 1px;
+//   }
+// }
+
+.el-card-tabs-padding {
+  padding: 10px;
+}
+
+.el-tab-first-div {
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-30%);
+
+  .el-row-info {
+    font-size: 16px;
+    margin: 50px 0;
+
+    // odd可以选择所有的奇数子元素，even选择所有偶数子元素
+    span:nth-child(odd) {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .el-row-total-count {
+      font-size: 20px !important
+    }
+  }
+}
+
+.input-margin-left-5 {
+  margin-left: 5%;
+}
+
+// 自定义input type="file"
+.a-upload {
+  vertical-align: middle;
+  padding: 4px 15px;
+  height: 30px;
+  line-height: 20px;
+  position: relative;
+  cursor: pointer;
+  color: #888;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1
+}
+
+.a-upload input {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer
+}
+
+// 详细信息对话框中tag的样式
+.el-tag-detail {
+  width: 70%;
+  height: 40px;
+  font-size: inherit;
+  display: flex;
+  align-items:center;
+  // 若多行则使用下面样式
+  // white-space: normal;
+  // height:auto;
+  // padding: 4px 10px;
+}
+
+.el-tag-detail-content {
+  width: 70%;
+  font-size: inherit;
+  display: flex;
+  align-items:center;
+  white-space: normal;
+  height:auto;
+}
+
+.el-tag-detail-score {
+  width: 50px;
+  height: 40px;
+  margin-left: 5px;
+  font-size: inherit;
+  display: flex;
+  align-items:center;
+}
+
+.el-form-item__content{
+  line-height: 30px;
+}
+
+.showAll_dialog {
+  display: flex;
+  margin-top: 15vh;
+  overflow: hidden;
+  .el-dialog {
+    margin: 0 auto !important;
+    height: 90%;
+    overflow: hidden;
+    .el-dialog__body {
+      position: absolute;
+      left: 0;
+      top: 54px;
+      bottom: 70px;
+      right: 0;
+      padding: 30px 20px;
+      z-index: 1;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+    .el-dialog__footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 10px 20px 20px;
+      z-index: 0;
+    }
+  }
+}
+
+.user-develop-tag {
+  width: 100px;
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+}
+
+.temp-placeholder {
+  height: 30px;
+}
+
+.user-info-tag {
+  font-size: 14px;
+}
+
+.user-info-tag-total {
+  font-size: 18px;
+}
+
+// 这部分的style样式没有加scoped，这部分样式就会作用于全局，从而去覆盖掉elementui的默认内部样式
+
+/* 修复input 背景不协调 和光标变色 */
+/* Detail see https://github.com/PanJiaChen/vue-element-admin/pull/927 */
+
+$bg: #283443;
+$light_gray: #fff;
+$cursor: #7d8185;
+
+@supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
+  .login-container .el-input input {
+    color: $cursor;
+  }
+}
+
+/* reset element-ui css */
+.login-container {
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+
+  .login-bkg {
+    position: absolute;
+    // transform: scale(0.8);
+    width: 100%;
+  }
+
+  .login-bkg-title {
+    position: absolute;
+    font-size: 50px;
+    font-weight: 600;
+    color: #ffffff;
+    left: 10%;
+    top: 20%;
+  }
+
+  .login-bkg-ill {
+    position: absolute;
+    left: 15%;
+    top: 30%;
+  }
+
+  .el-input {
+    display: inline-block;
+    height: 47px;
+    width: 85%;
+
+    input {
+      background: transparent;
+      border: 0px;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      padding: 12px 5px 12px 15px;
+      color: #000000; // 这里修改的是输入框的输入字体颜色
+      height: 47px;
+      caret-color: $cursor;
+
+      &:-webkit-autofill {
+        box-shadow: 0 0 0px 1000px $bg inset !important;
+        -webkit-text-fill-color: $cursor !important;
+      }
+    }
+  }
+
+  // 这里可以修改输入框的样式
+  .el-form-item {
+    border: 1px solid rgb(117, 114, 114, 0.2); // 输入框边框边框样式
+    background-color: transparent; // 输入框背景颜色
+    border-radius: 5px;
+    color: #000000;
+  }
+
+  // 修改选择框颜色
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    border-color: #f32823 !important;
+    background-color: #f32823 !important;
+  }
+  .el-checkbox__inner:hover {
+    border-color: #f32823 !important;
+  }
+  .el-checkbox__input.is-focus .el-checkbox__inner {
+    border-color: #f32823 !important;
+  }
+  // 修改选择label字体颜色
+  .el-checkbox__input.is-checked + .el-checkbox__label {
+    color: #f32823 !important;
+  }
+}
+
